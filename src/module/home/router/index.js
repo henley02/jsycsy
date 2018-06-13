@@ -10,11 +10,16 @@ export default new Router({
       redirect: '/index'
     },
     {
-      path: '/',
+      path: '/index',
       name: 'Index',
       component(resolve) {
         require(['home/pages/index/index.vue'], resolve);
       }
+    },
+    {
+      path: '*',
+      name: '404 ',
+      redirect: 'index'
     }
   ]
 });
