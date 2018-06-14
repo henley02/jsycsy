@@ -13,7 +13,7 @@ export default new Router({
       path: '/index',
       name: 'Index',
       component(resolve) {
-        require(['home/pages/index/index.vue'], resolve);
+        require(['pages/index/index.vue'], resolve);
       }
     },
     {
