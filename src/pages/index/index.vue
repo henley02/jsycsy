@@ -15,7 +15,6 @@
     created() {
     },
     mounted() {
-      console.log(1);
     },
     components: {
       Banner

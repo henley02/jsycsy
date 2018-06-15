@@ -12,11 +12,11 @@
         <div>苏州首席专业茶道培训</div>
         <div>古琴·书法·花艺·香道</div>
         <div>
-          <img :src="scanImg" width="70%"/>
+          <img :src="scanImg" width="280px"/>
         </div>
       </el-col>
       <el-col :span="24">&copy;2016-2018 苏州及时雨茶叶有限公司 版权所有</el-col>
-      <el-col :span="24"><a target="_blank" href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action">备案：苏ICP备16018492号</a>
+      <el-col :span="24"><a target="_blank" href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action">备案：苏ICP备16018492号-1</a>
       </el-col>
     </el-row>
   </el-footer>
