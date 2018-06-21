@@ -2,13 +2,21 @@
   <el-header>
     <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect"
              background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
-      <el-menu-item index="1">首页</el-menu-item>
-      <el-submenu index="2">
-        <template slot="title">茶道培训</template>
-        <el-menu-item index="2-1">初级</el-menu-item>
-        <el-menu-item index="2-2">中级</el-menu-item>
-        <el-menu-item index="2-3">高级</el-menu-item>
-      </el-submenu>
+      <template v-for="(item,index) in $router.options.routes">
+        <template v-if="item.component">
+
+          <el-submenu :index="item.name" v-if="item.children && item.children.length>0" :key="index">
+            <template slot="title">{{item.props.label}}</template>
+            <el-menu-item :index="children.name" v-for="(children,cIndex) in item.children"
+                          :key="cIndex"
+                          @click="jump(children.name)">{{children.props.label}}
+            </el-menu-item>
+          </el-submenu>
+
+          <el-menu-item v-else :key="index" :index="item.name" @click="jump(item.name)">{{item.props.label}}
+          </el-menu-item>
+        </template>
+      </template>
     </el-menu>
   </el-header>
 </template>
@@ -17,17 +25,22 @@
     name: 'h-header',
     data() {
       return {
-        activeIndex: '1'
+        activeIndex: 'Index',
+        teaList: []
       };
     },
     methods: {
+      jump(name) {
+        this.$router.push({name: name});
+      },
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
       }
     },
     created() {
-    },
-    mounted() {
+      console.log(this.$router.options.routes);
+      this.teaList = this.$router.options.routes.filter(item => item.name === 'temTrain')[0];
+      console.log(this.teaList);
     }
   };
 </script>

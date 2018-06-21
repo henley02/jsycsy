@@ -52,24 +52,4 @@
     font-weight: 900;
 
   }
-
-  .title {
-    display: flex;
-    width: 80%;
-    margin: 12px auto 12px auto;
-  }
-
-  .title .line {
-    flex: 1;
-    position: relative;
-    top: -10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  }
-
-  .title .text {
-    padding: 0 12px;
-    color: #000;
-    font-weight: 700;
-    font-size: 16px;
-  }
 </style>
