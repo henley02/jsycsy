@@ -17,6 +17,13 @@
       </el-col>
       <el-col :span="24">&copy;2016-2018 苏州及时雨茶叶有限公司 版权所有</el-col>
       <el-col :span="24"><a target="_blank" href="http://www.miitbeian.gov.cn/publish/query/indexFirst.action">备案：苏ICP备16018492号-1</a>
+        <div style="width:300px;margin:0 auto; padding:20px 0;">
+          <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32050802010847"
+             style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img :src="require('assets/images/put-on-records.png')"
+                                                                                                  style="float:left;"/>
+            <p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">
+              苏公网安备 32050802010847号</p></a>
+        </div>
       </el-col>
     </el-row>
   </el-footer>
