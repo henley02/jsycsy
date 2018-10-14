@@ -7,11 +7,12 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import 'assets/css/reset.css';
 import 'assets/stylus/index.styl';
+import statistics from 'public/scripts/statistics';
 
 Vue.config.productionTip = false;
 
 Vue.use(ElementUI);
-
+Vue.use(statistics);
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
